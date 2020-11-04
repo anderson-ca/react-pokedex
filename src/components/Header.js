@@ -7,9 +7,9 @@ const Header = () => {
             <h2>Header Component</h2>
             <nav>
                 <ul>
-                    <li><Link to="/"></Link></li>
-                    <li><Link to="/About"></Link></li>
-                    <li><Link to="/index"></Link></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/About">About</Link></li>
+                    <li><Link to="/pokedex">Pokemon Index</Link></li>
                 </ul>
             </nav>
         </div>

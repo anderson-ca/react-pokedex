@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-const Navabar = () => {
+const Navbar = () => {
     return (
         <div>
             <h2>Pokedex App</h2>
@@ -16,4 +16,4 @@ const Navabar = () => {
     );
 }
 
-export default Navabar;
+export default Navbar;

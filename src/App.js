@@ -1,7 +1,7 @@
 import React from "react";
 import {Switch, Route} from "react-router-dom";
 import "./App.css";
-import Navabar from "./components/Navabar";
+import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Pokedex from "./components/Pokedex";
 import Home from "./components/Home";
@@ -10,7 +10,7 @@ import PokemonDetails from "./components/PokemonDetails";
 function App() {
     return (
         <div id="app-container">
-            <Navabar/>
+            <Navbar/>
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route path="/about" component={About}/>

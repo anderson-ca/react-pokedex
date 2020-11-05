@@ -7,14 +7,17 @@ const PokemonDetails = ({match}) => {
     const [pokemon, setPokemon] = useState({})
 
     useEffect(() => {
-        console.log(match.params.id);
         fetchPokemonDetails();
-    }, [match.params.id])
+        return () => {
+            // clean up method
+        }
+
+    }, [])
 
     const fetchPokemonDetails = async () => {
         const {data} = await axios(`https://pokeapi.co/api/v2/pokemon/${match.params.id}/`);
         const result = await axios(`https://pokeapi.co/api/v2/characteristic/${data.id}/`);
-        console.log(result);
+        console.log(data.id);
         const pokemonSchema = {
             abilities: data.abilities.map(({ability}) => ability.name),
             type: data.types.map(({type}) => type.name),

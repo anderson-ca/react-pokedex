@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, Fragment} from "react";
 import {Link} from "react-router-dom";
 import axios from "axios";
 
@@ -17,14 +17,13 @@ const Pokedex = () => {
     }
 
     return (
-        <div>
-            <h2>This is the pokedex</h2>
+        <div id="pokedex-container">
             {pokemons.map(({name}) => (
-                <div key={name}>
+                <div className="pokemon-card" key={name}>
                     <h2>
                         <Link to={`/pokemon/${name}`}>{name}</Link>
                     </h2>
-                    <img src={`https://img.pokemondb.net/artwork/${name}.jpg`} alt="pokemon picture"/>
+                    <img className="pokemon-img-card" src={`https://img.pokemondb.net/artwork/${name}.jpg`} alt="" />
                 </div>
             ))}
         </div>

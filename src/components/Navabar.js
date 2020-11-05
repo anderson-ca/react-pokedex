@@ -1,10 +1,10 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-const Header = () => {
+const Navabar = () => {
     return (
         <div>
-            <h2>Header Component</h2>
+            <h2>Pokedex App</h2>
             <nav>
                 <ul>
                     <li><Link to="/">Home</Link></li>
@@ -16,4 +16,4 @@ const Header = () => {
     );
 }
 
-export default Header;
+export default Navabar;

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, Fragment} from "react";
 import axios from "axios";
 
 const PokemonDetails = ({match}) => {
@@ -24,11 +24,11 @@ const PokemonDetails = ({match}) => {
     }
 
     return (
-        <div>
+        <Fragment>
             <h2>{match.params.id}</h2>
             <img src={pokemon.picture} alt="pokemon picture"/>
             <h3>{pokemon.description}</h3>
-        </div>
+        </Fragment>
     );
 }
 
